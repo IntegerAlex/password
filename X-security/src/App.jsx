@@ -1,5 +1,5 @@
- import { useState } from 'react'
-
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 import './App.css'
 
 function App() {
@@ -11,12 +11,10 @@ function App() {
     const Site = document.getElementById('site').value
     const user = document.getElementById('user').value
     const pass = document.getElementById('pass').value
-
-
     setSite(Site)
     setUsername(user)
     setPassword(pass)
-    
+
     if (site === null || username === null || password === null) {
       alert('Please enter all fields')
     }
@@ -26,6 +24,23 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    if(site !== null && username !== null && password !== null){
+      axios
+        .post('http://localhost:3000/save', {
+          site: site,
+          username: username,
+          password: password,
+        })
+        .then((res) => {
+          console.log(res)  
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+      }
+    }, [site, username, password])
+  
 
 
 

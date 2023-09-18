@@ -13,8 +13,17 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
     });
 
+app.post('/save', (req, res) => {
+    console.log(req.body);
+    const { site , username , password } = req.body;
+    if (site && username && password) {
+        res.send('POST request to the homepage');
+    }
+    res.send(' request to the homepage');
+    });
+
 app.listen(PORT, () =>
     // console.log(PORT),
-    
+
     console.log(`Server listening on port ${PORT}!`),
 );

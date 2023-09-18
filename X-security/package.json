@@ -1,7 +1,11 @@
 {
   "name": "x-security",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A project for x-security",
+  "author": "IntegerAlex",
+  "license": "LGPL-3.0-or-later",
+  
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,6 +14,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
