@@ -9,7 +9,7 @@ Open Source: Transparent and open for contributions from the community.
 Getting Started
 To get started with X-Security, follow these steps:
 
-Clone the repository: git clone https://github.com/IntegerAlex/password/X-security.git
+Clone the repository: git clone https://github.com/IntegerAlex/password
 Navigate to the project directory: cd X-Security
 Install dependencies: npm install
 Run the application: npm start
